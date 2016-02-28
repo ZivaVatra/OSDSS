@@ -13,6 +13,6 @@ Which other tools I will have to double check, which I will do once I put the co
 
 ## Does it work
 
-Yep! No idea how it compares to commercial/freeware stackers, but for a first attempt it was pretty good IMO:
+Yep! No idea how it compares to commercial/freeware stackers, but for a first attempt it was pretty good IMO. Direct link below, or just go to the page linked above.
 
-[[http://www.ziva-vatra.com/image.php?render=67&name=U2lkZV9ieV9zaWRl|alt=example]]
+http://www.ziva-vatra.com/image.php?render=67&name=U2lkZV9ieV9zaWRl
