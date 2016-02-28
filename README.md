@@ -10,3 +10,9 @@ However dev stalled when I had to move to the city for work (the light pollution
 Rather than write my own image processing program, this is a wrapper script around other tools.
 
 Which other tools I will have to double check, which I will do once I put the code up here.
+
+## Does it work
+
+Yep! No idea how it compares to commercial/freeware stackers, but for a first attempt it was pretty good IMO:
+
+[![screenshot](http://www.ziva-vatra.com/image.php?render=67&name=U2lkZV9ieV9zaWRl)]
