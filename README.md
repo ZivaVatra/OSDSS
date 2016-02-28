@@ -15,4 +15,4 @@ Which other tools I will have to double check, which I will do once I put the co
 
 Yep! No idea how it compares to commercial/freeware stackers, but for a first attempt it was pretty good IMO:
 
-[![screenshot](http://www.ziva-vatra.com/image.php?render=67&name=U2lkZV9ieV9zaWRl)]
+[[http://www.ziva-vatra.com/image.php?render=67&name=U2lkZV9ieV9zaWRl|alt=example]]
