@@ -11,8 +11,8 @@ However dev stalled when I had to move to the city for work (the light pollution
 I have included 12 sample images I took with my DSLR, which you can use as a refence to see how the noise reduction works. 
 ## Current versions:
 	- deepsky_stack_vers1.sh --  Bash script that (ab)uses panotools/enfuse/nona from the hugin project to align and fuse images together. 
-	  To run, you do it as follows:  "deepsky_stack_vers1.sh ./sample_photos/*.tif". The result will be in your CWD with the name "deepsky_stack.tif".
-	  You can compare the output to one of the sample_photos to see how much noise was reduced. 
-	  Here is one I did earlier: http://www.ziva-vatra.com/index.php?aid=67&id=U29mdHdhcmU=
+To run, you do it as follows:  "deepsky_stack_vers1.sh ./sample_photos/*.tif". The result will be in your CWD with the name "deepsky_stack.tif".
+You can compare the output to one of the sample_photos to see how much noise was reduced. 
+Here is one I did earlier: http://www.ziva-vatra.com/index.php?aid=67&id=U29mdHdhcmU=
 
 
