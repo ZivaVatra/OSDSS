@@ -51,13 +51,16 @@ fi
 
 
 #First, align images
-align_image_stack -i  -p Project_$UUID.pto $@  #-a astroshot_$UUID $@
-nona -v -m TIFF_m -o ./astroshot_$UUID  ./Project_$UUID.pto ./*.tif
+align_image_stack -i -C -p Project_$UUID.pto $@  #-a astroshot_$UUID $@
+nona -v -m TIFF_m -o ./astroshot_$UUID  ./Project_$UUID.pto $@
 #move them to correct dir
 mv -v ./astroshot_$UUID* ./$EXTDIR/
 
 cd $EXTDIR
-#time enfuse-mp -v -l 29 -o deepsky_1.tif ./astroshot*.tif
-#time enfuse-mp -v -d 16 -l 29  -o deepsky_2.tif ./astroshot*.tif
-time enfuse-mp -v  -l 29  -o deepsky_1.tif ./astroshot*.tif
-time enfuse-mp --compression=LZW -v -d 16 -l 29 --entropy-cutoff=95% --entropy-weight=0.4 --gray-projector=luminance -o deepsky_2.tif ./astroshot*.tif
+#time enfuse -v -l 29 -o deepsky_1.tif ./astroshot*.tif
+#time enfuse -v -d 16 -l 29  -o deepsky_2.tif ./astroshot*.tif
+#time enfuse -v  -l 29  -o deepsky_1.tif ./astroshot*.tif
+time enfuse --compression=LZW -v -d 16 -l 29 --entropy-cutoff=95% --entropy-weight=0.4 --gray-projector=luminance -o ../deepsky_stack.tif ./astroshot*.tif
+cd ..
+rm -rf ./$EXTDIR #No longer needed
+rm Project_$UUID.pto 
