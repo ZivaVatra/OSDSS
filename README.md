@@ -16,8 +16,9 @@ I have included 12 sample images I took with my DSLR, which you can use as a ref
 A Bash script that (ab)uses panotools/enfuse/nona from the hugin project to align and fuse images together. 
 To run, you do it as follows:  
 <pre>deepsky_stack_vers1.sh ./sample_photos/*.tif</pre>
-The result will be in your CWD with the name "deepsky_stack.tif".
-You can compare the output to one of the sample_photos to see how much noise was reduced. 
+The result will be in your CWD with the name "deepsky_stack.tif". It will also create a reference image called "non_stack_reference.tif" (which is identical to the first image provided as a positional argument. 
+
+You can compare the output of the two images to see how well the noise reduction worked. 
 Here is one I did earlier: http://www.ziva-vatra.com/index.php?aid=67&id=U29mdHdhcmU=
 
 

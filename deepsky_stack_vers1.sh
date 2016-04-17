@@ -64,3 +64,4 @@ time enfuse --compression=LZW -v -d 16 -l 29 --entropy-cutoff=95% --entropy-weig
 cd ..
 rm -rf ./$EXTDIR #No longer needed
 rm Project_$UUID.pto 
+cp $1 ./non_stack_reference.tif
