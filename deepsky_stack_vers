@@ -1,0 +1,42 @@
+#!/usr/bin/perl
+
+use warnings;
+use strict;
+use Image::Magick;
+
+my $path = shift;
+opendir(DIR, $path) || die("Path \"$path\" not found\n");
+
+my @images = grep { /.*\.tif[f]?/ } readdir(DIR);
+
+
+print "-" x 80;
+print("\nImageset:\n");
+foreach (@images) {
+	print "\t$_\n";
+}
+
+my $reference_image = shift(@images);
+print("Using $reference_image as reference image\n");
+print("Commencing alignment...\n");
+
+my $rimage=Image::Magick->new();
+$rimage->ReadImage("$path/$reference_image");
+
+
+# Here we make use of the K-S test over the DFT of the reference image
+# In the goal to get the K-S tests to fit exactly between the 2nd and 3rd
+# quartile
+
+
+$rimage->ForwardFourierTransform(magnitude=>"true");
+# We make use of this FFT with K-S to get a distribution map.
+# We would want the distribution map in 2 dimensions at least,
+# but 4 would be better (left, right, rotate and scale).
+
+# In theory all images should be the same size so we should not need to scale
+# However when taking multiple astro shots, the images can be offset by the
+# first 3 dimensions
+
+$rimage->Normalize();
+$rimage->Write(filename=>"$path/testimage.tiff", compression=>'gzip');
